@@ -15,7 +15,13 @@ The app should be able to perform READ ONLY operations on the Restaurant models 
 - Pseudocode your project by determining your end-points and database schema
 - Create GitHub repo online
 - Save all and create your first commit to main, then switch to a dev branch
-
+# Endpoints
+/menu
+/breakfast
+/lunch
+/dinner
+/appetizer
+/drink
 # Procedural
 
 ## Begin:
@@ -42,8 +48,22 @@ The app should be able to perform READ ONLY operations on the Restaurant models 
 ## Render: 
 send the data over to the React components
 # Functional
+```
+function display an item()
+{
+    for each item in the database
 
-# Object Oriented
+    display its name, description, spice level, and its cuisine id (treat this as a sql query)
+}
+function add an item()
+{
+
+    add a food item based on its its name, description, spice level, and its cuisine id (treat this as a sql query)
+
+}
+
+```
+# Object Oriented / thinking in backend / thinking in django
 ```
 class menu item{
 name: string
@@ -51,9 +71,26 @@ id: integer
 spice: string
 description: string
 cuisine_id: int
+category_id: int
 location_id: int
 }
 
+class cuisine
+{
+    id: 1-1 relationship with cuisine id 
+    type: character string
+}
+class category 
+{
+    id: 1-1 relationship with category id
+    type: character string
+}
+class locations # we are under presumption that you can have more than one location
+{
+    id: 1-1 relationship with location id
+    type: character string
+
+}
 ```
 # GPT advice 
 ## Begin:
