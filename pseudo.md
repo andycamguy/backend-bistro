@@ -19,13 +19,42 @@ The app should be able to perform READ ONLY operations on the Restaurant models 
 # Procedural
 
 ## Begin:
+- Setup: Install Django and required dependencies, create a new Django project, and configure the database settings to use PostgresQL.
 
+- Define Models: Create the necessary models to represent restaurant items, such as Category and MenuItem. Each model should have relevant fields like name, description, price, etc.
 ## Init:
+- Create the API with the table
+- Create Views: Implement API views to handle READ operations (GET requests) for the restaurant items. These views will be responsible for fetching data from the database.
+
+- Create URLs: Define URLs and URL routing for the API views. This will determine the endpoints through which the frontend can access the data.
+- Install Django Dependencies: Install the required Python packages, including Django and other dependencies.
+
+- Create Django Project: Set up a new Django project using the django-admin or manage.py command.
+
+- Configure Database: Specify the settings for connecting the Django project to a PostgresQL database or any other desired database.
+
+- Define Models: Create the Django models that will represent the Category and MenuItem entities for the restaurant menu.
+
+- Create API Views: Define Django views that handle the READ operations for the restaurant items.
+
+- Create API URLs: Create URL patterns for the API views to define their endpoints.
 
 ## Render: 
-
+send the data over to the React components
 # Functional
 
+# Object Oriented
+```
+class menu item{
+name: string
+id: integer
+spice: string
+description: string
+cuisine_id: int
+location_id: int
+}
+
+```
 # GPT advice 
 ## Begin:
 - Setup: Install Django and required dependencies, create a new Django project, and configure the database settings to use PostgresQL.
