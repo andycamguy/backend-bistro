@@ -1,5 +1,5 @@
-import json
 from django.db import models
+import json
 
 class Category(models.Model):
     name = models.CharField(max_length=100)
@@ -17,7 +17,10 @@ class MenuItem(models.Model):
         return self.name
 
     @classmethod
-    def load_from_json(cls, data):
+    def load_from_json(cls, file_path):
+        with open(file_path) as f:
+            data = json.load(f)
+
         for item_data in data.get("cuisines", []):
             category_name = item_data.get("category", "")
             category, _ = Category.objects.get_or_create(name=category_name)
