@@ -3,7 +3,7 @@
         {
             "name": "Shrimp n stuff",
             "price": 10.99,
-            "category": "Cuisine Type 1",
+            "category": "Appetizer",
             "spice_level": "Mild",
             "description": "Description of Food Item 1."
         },
