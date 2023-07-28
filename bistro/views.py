@@ -16,6 +16,15 @@ def bistro_items(request):
     # Now, you can query the MenuItem objects and use them in your view
     menu_items = MenuItem.objects.all()
 
-    # For simplicity, let's return the names of the menu items as a response
-    menu_item_names = ', '.join(item.name for item in menu_items)
-    return JsonResponse(f"Menu Items: {menu_item_names}", safe=False)
+    menu_item_data = []
+    for item in menu_items:
+        item_data = {
+            'name': item.name,
+            'description': item.description,
+            'price': float(item.price),
+            'category': item.category.name,
+        }
+        menu_item_data.append(item_data)
+
+    # Return the menu_item_data list as the JSON response
+    return JsonResponse(menu_item_data, safe=False)
